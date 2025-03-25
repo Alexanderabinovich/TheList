@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cyber Resources Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Cyber Resources Hub</h1>
+      <input type="text" id="search" placeholder="Search resources..." onkeyup="searchResources()">
+    </header>
+
+    <!-- Category Tabs -->
+    <div class="tabs">
+      <button class="tablink active" onclick="openCategory(event, 'cat1')">1. Cyber Labs, CTFs &amp; Hands‑On Practice Platforms</button>
+      <button class="tablink" onclick="openCategory(event, 'cat2')">2. Free Resources, Downloadable Courses &amp; Educational Hubs</button>
+      <button class="tablink" onclick="openCategory(event, 'cat3')">3. Aggregated OSINT, Resource Collections &amp; Curated Lists</button>
+      <button class="tablink" onclick="openCategory(event, 'cat4')">4. Cyber Educational Platforms &amp; Certification Providers</button>
+    </div>
+
+    <!-- Category 1 -->
+    <div id="cat1" class="tabcontent active">
+      <h2>1. Cyber Labs, CTFs &amp; Hands‑On Practice Platforms</h2>
+      <p>These platforms provide interactive labs, challenges, vulnerable machines, and simulated environments for practicing offensive and defensive skills.</p>
+      <ul class="resource-list">
+        <li>
+          <h3>AccessCyber</h3>
+          <a href="https://accesscyber.co/" target="_blank">https://accesscyber.co/</a>
+          <p>Free labs and courses covering both offensive and defensive techniques.</p>
+        </li>
+        <li>
+          <h3>OWASP Juice Shop</h3>
+          <a href="https://juice-shop.herokuapp.com/#/" target="_blank">https://juice-shop.herokuapp.com/#/</a>
+          <p>An intentionally vulnerable web application for learning web security testing.</p>
+        </li>
+        <li>
+          <h3>LabEx</h3>
+          <a href="https://labex.io/" target="_blank">https://labex.io/</a>
+          <p>Cloud‑based lab environments with realistic security scenarios.</p>
+        </li>
+        <li>
+          <h3>LetsDefend</h3>
+          <a href="https://letsdefend.io/" target="_blank">https://letsdefend.io/</a>
+          <p>Interactive incident response and penetration testing challenges.</p>
+        </li>
+        <li>
+          <h3>Hack The Box</h3>
+          <a href="https://www.hackthebox.com/" target="_blank">https://www.hackthebox.com/</a>
+          <p>A widely popular platform with a mix of free and paid challenges and machines.</p>
+        </li>
+        <li>
+          <h3>Hacktoria</h3>
+          <a href="https://hacktoria.com/#" target="_blank">https://hacktoria.com/#</a>
+          <p>Provides CTF challenges and guided labs for offensive security practice.</p>
+        </li>
+        <li>
+          <h3>BlueTeamLabs</h3>
+          <a href="https://blueteamlabs.online/" target="_blank">https://blueteamlabs.online/</a>
+          <p>Defensive security labs and exercises for blue team training.</p>
+        </li>
+        <li>
+          <h3>CyberDefenders</h3>
+          <a href="https://cyberdefenders.org/" target="_blank">https://cyberdefenders.org/</a>
+          <p>Free simulated attack/defense scenarios for incident response practice.</p>
+        </li>
+        <li>
+          <h3>PentesterLab</h3>
+          <a href="https://pentesterlab.com/" target="_blank">https://pentesterlab.com/</a>
+          <p>Hands‑on exercises and tutorials focusing on web application security.</p>
+        </li>
+        <li>
+          <h3>TCM Sec Academy</h3>
+          <a href="https://academy.tcm-sec.com/" target="_blank">https://academy.tcm-sec.com/</a>
+          <p>Training modules and downloadable content for both red and blue teams.</p>
+        </li>
+        <li>
+          <h3>DFIR Diva</h3>
+          <a href="https://dfirdiva.com/" target="_blank">https://dfirdiva.com/</a>
+          <p>Digital forensics and incident response labs and free training resources.</p>
+        </li>
+        <li>
+          <h3>Microsoft Learn – Security</h3>
+          <a href="https://learn.microsoft.com/en-us/training/" target="_blank">https://learn.microsoft.com/en-us/training/</a>
+          <p>Free, self‑paced courses on security fundamentals and cloud security.</p>
+        </li>
+        <li>
+          <h3>EchoCTF</h3>
+          <a href="https://echoctf.red/" target="_blank">https://echoctf.red/</a>
+          <p>CTF challenges ranging from web exploitation to reverse engineering.</p>
+        </li>
+        <li>
+          <h3>RangeForce Free Edition</h3>
+          <a href="https://www.rangeforce.com/free-edition" target="_blank">https://www.rangeforce.com/free-edition</a>
+          <p>Interactive cyber range exercises for defensive skills.</p>
+        </li>
+        <li>
+          <h3>CryptoHack</h3>
+          <a href="https://cryptohack.org/" target="_blank">https://cryptohack.org/</a>
+          <p>Challenges and puzzles focused on cryptography and crypto‑analysis.</p>
+        </li>
+        <li>
+          <h3>Splunk Training (Free)</h3>
+          <a href="https://www.splunk.com/en_us/training.html" target="_blank">https://www.splunk.com/en_us/training.html</a>
+          <p>Free training and hands‑on labs for security monitoring and analytics.</p>
+        </li>
+        <li>
+          <h3>INE (Internet Network Education)</h3>
+          <a href="https://my.ine.com/" target="_blank">https://my.ine.com/</a>
+          <p>A large collection of video courses and hands‑on labs on penetration testing (free content available along with subscription options).</p>
+        </li>
+        <li>
+          <h3>PortSwigger Web Security Academy</h3>
+          <a href="https://portswigger.net/web-security" target="_blank">https://portswigger.net/web-security</a>
+          <p>Extensive free interactive labs on web vulnerabilities and exploitation.</p>
+        </li>
+        <li>
+          <h3>Splunk Bots (Security Challenges)</h3>
+          <a href="https://bots.splunk.com/login?redirect=/" target="_blank">https://bots.splunk.com/login?redirect=/</a>
+          <p>Free challenges to test your security monitoring skills with Splunk.</p>
+        </li>
+        <li>
+          <h3>NVIDIA Free Courses</h3>
+          <a href="https://resources.nvidia.com/en-us-event-slides/free-courses" target="_blank">https://resources.nvidia.com/en-us-event-slides/free-courses</a>
+          <p>Free technical courses, including topics relevant to cybersecurity.</p>
+        </li>
+        <li>
+          <h3>Trace Labs</h3>
+          <a href="https://www.tracelabs.org/" target="_blank">https://www.tracelabs.org/</a>
+          <p>OSINT challenges and volunteer opportunities that intersect with cybersecurity investigations.</p>
+        </li>
+        <li>
+          <h3>VulnMachines</h3>
+          <a href="https://www.vulnmachines.com/" target="_blank">https://www.vulnmachines.com/</a>
+          <p>Downloadable vulnerable VMs for safe practice of penetration testing techniques.</p>
+        </li>
+        <li>
+          <h3>Virtual Cyber Labs</h3>
+          <a href="https://virtualcyberlabs.com/" target="_blank">https://virtualcyberlabs.com/</a>
+          <p>Simulated lab environments for a variety of cybersecurity exercises.</p>
+        </li>
+        <li>
+          <h3>SANS Cyber Aces</h3>
+          <a href="https://www.sans.org/cyberaces/" target="_blank">https://www.sans.org/cyberaces/</a>
+          <p>Foundational cybersecurity challenges and training designed for beginners.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Category 2 -->
+    <div id="cat2" class="tabcontent">
+      <h2>2. Free Resources, Downloadable Courses &amp; Educational Hubs</h2>
+      <p>These sites offer free courses, downloadable training content, and structured educational programs in cybersecurity.</p>
+      <ul class="resource-list">
+        <li>
+          <h3>AccessCyber</h3>
+          <a href="https://accesscyber.co/" target="_blank">https://accesscyber.co/</a>
+          <p>Free training labs and downloadable courses.</p>
+        </li>
+        <li>
+          <h3>Juice Shop (OWASP)</h3>
+          <a href="https://juice-shop.herokuapp.com/#/" target="_blank">https://juice-shop.herokuapp.com/#/</a>
+          <p>An intentionally insecure application for web security training.</p>
+        </li>
+        <li>
+          <h3>LabEx</h3>
+          <a href="https://labex.io/" target="_blank">https://labex.io/</a>
+          <p>Practice labs and scenarios for ethical hacking and defense.</p>
+        </li>
+        <li>
+          <h3>LetsDefend</h3>
+          <a href="https://letsdefend.io/" target="_blank">https://letsdefend.io/</a>
+          <p>Interactive challenges and courses on penetration testing and incident response.</p>
+        </li>
+        <li>
+          <h3>Hack The Box</h3>
+          <a href="https://www.hackthebox.com/" target="_blank">https://www.hackthebox.com/</a>
+          <p>A mix of free and paid challenges to develop real-world hacking skills.</p>
+        </li>
+        <li>
+          <h3>Hacktoria</h3>
+          <a href="https://hacktoria.com/#" target="_blank">https://hacktoria.com/#</a>
+          <p>Free guided challenges focused on offensive security.</p>
+        </li>
+        <li>
+          <h3>BlueTeamLabs</h3>
+          <a href="https://blueteamlabs.online/" target="_blank">https://blueteamlabs.online/</a>
+          <p>Defensive security labs and exercises for blue team training.</p>
+        </li>
+        <li>
+          <h3>CyberDefenders</h3>
+          <a href="https://cyberdefenders.org/" target="_blank">https://cyberdefenders.org/</a>
+          <p>A free online platform with defensive (blue team) challenges.</p>
+        </li>
+        <li>
+          <h3>PentesterLab</h3>
+          <a href="https://pentesterlab.com/" target="_blank">https://pentesterlab.com/</a>
+          <p>Free and paid hands‑on tutorials for web application security testing.</p>
+        </li>
+        <li>
+          <h3>TCM Sec Academy</h3>
+          <a href="https://academy.tcm-sec.com/" target="_blank">https://academy.tcm-sec.com/</a>
+          <p>Downloadable and interactive training modules for ethical hacking.</p>
+        </li>
+        <li>
+          <h3>DFIR Diva</h3>
+          <a href="https://dfirdiva.com/" target="_blank">https://dfirdiva.com/</a>
+          <p>Free training videos, labs, and courses on digital forensics and incident response.</p>
+        </li>
+        <li>
+          <h3>Microsoft Learn</h3>
+          <a href="https://learn.microsoft.com/en-us/training/" target="_blank">https://learn.microsoft.com/en-us/training/</a>
+          <p>Free self‑paced courses on cybersecurity, cloud, and Microsoft technologies.</p>
+        </li>
+        <li>
+          <h3>EchoCTF</h3>
+          <a href="https://echoctf.red/" target="_blank">https://echoctf.red/</a>
+          <p>Free CTF challenges across various cybersecurity topics.</p>
+        </li>
+        <li>
+          <h3>RangeForce Free Edition</h3>
+          <a href="https://www.rangeforce.com/free-edition" target="_blank">https://www.rangeforce.com/free-edition</a>
+          <p>Cyber range exercises for practicing incident response and defense.</p>
+        </li>
+        <li>
+          <h3>CryptoHack</h3>
+          <a href="https://cryptohack.org/" target="_blank">https://cryptohack.org/</a>
+          <p>Free challenges to build cryptography and crypto‑analysis skills.</p>
+        </li>
+        <li>
+          <h3>Splunk Training &amp; Bots</h3>
+          <p>
+            <a href="https://www.splunk.com/en_us/training.html" target="_blank">https://www.splunk.com/en_us/training.html</a> and 
+            <a href="https://bots.splunk.com/login?redirect=/" target="_blank">https://bots.splunk.com/login?redirect=/</a>
+          </p>
+          <p>Free courses and challenge-based labs on security monitoring with Splunk.</p>
+        </li>
+        <li>
+          <h3>INE (Internet Network Education)</h3>
+          <a href="https://my.ine.com/" target="_blank">https://my.ine.com/</a>
+          <p>A robust video course library (with some free content) for penetration testing and cybersecurity.</p>
+        </li>
+        <li>
+          <h3>PortSwigger Web Security Academy</h3>
+          <a href="https://portswigger.net/web-security" target="_blank">https://portswigger.net/web-security</a>
+          <p>Completely free interactive labs on web application vulnerabilities.</p>
+        </li>
+        <li>
+          <h3>NVIDIA Resources</h3>
+          <a href="https://resources.nvidia.com/en-us-event-slides/free-courses" target="_blank">https://resources.nvidia.com/en-us-event-slides/free-courses</a>
+          <p>Free courses on a range of technical topics, including aspects of cybersecurity.</p>
+        </li>
+        <li>
+          <h3>Trace Labs</h3>
+          <a href="https://www.tracelabs.org/" target="_blank">https://www.tracelabs.org/</a>
+          <p>OSINT challenges combined with cybersecurity volunteer opportunities.</p>
+        </li>
+        <li>
+          <h3>Intel Techniques</h3>
+          <a href="https://inteltechniques.com/" target="_blank">https://inteltechniques.com/</a>
+          <p>Free OSINT tools, tutorials, and downloadable resources.</p>
+        </li>
+        <li>
+          <h3>Mosse Institute</h3>
+          <a href="https://www.mosse-institute.com/" target="_blank">https://www.mosse-institute.com/</a>
+          <p>Free resources and research in cybersecurity and digital forensics.</p>
+        </li>
+        <li>
+          <h3>Class Central – OSINT Courses</h3>
+          <a href="https://www.classcentral.com/subject/osint" target="_blank">https://www.classcentral.com/subject/osint</a>
+          <p>Aggregated free online courses and tutorials on OSINT and related topics.</p>
+        </li>
+        <li>
+          <h3>Security Blue Team</h3>
+          <a href="https://www.securityblue.team/" target="_blank">https://www.securityblue.team/</a>
+          <p>Free courses and resources focused on defensive (blue team) operations.</p>
+        </li>
+        <li>
+          <h3>DFIR Diva Training</h3>
+          <a href="https://training.dfirdiva.com/" target="_blank">https://training.dfirdiva.com/</a>
+          <p>Free and premium courses on digital forensics and incident response.</p>
+        </li>
+        <li>
+          <h3>Basel Governance Training</h3>
+          <a href="https://learn.baselgovernance.org/enrol/index.php?id=79" target="_blank">https://learn.baselgovernance.org/enrol/index.php?id=79</a>
+          <p>Free training on governance, risk, and cybersecurity compliance.</p>
+        </li>
+        <li>
+          <h3>Virtual Cyber Labs</h3>
+          <a href="https://virtualcyberlabs.com/" target="_blank">https://virtualcyberlabs.com/</a>
+          <p>Simulated lab environments for practicing cybersecurity techniques.</p>
+        </li>
+        <li>
+          <h3>SANS Cyber Aces</h3>
+          <a href="https://www.sans.org/cyberaces/" target="_blank">https://www.sans.org/cyberaces/</a>
+          <p>Free introductory cybersecurity training and challenges.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Category 3 -->
+    <div id="cat3" class="tabcontent">
+      <h2>3. Aggregated OSINT, Resource Collections &amp; Curated Lists</h2>
+      <p>These hubs compile hundreds of free tools, labs, courses, documentaries, YouTube channels, and other resources.</p>
+      <ul class="resource-list">
+        <li>
+          <h3>GitHub Collections<br>Cybersecurity Resources – General</h3>
+          <a href="https://github.com/Nickyie/Cybersecurity-Resources/" target="_blank">https://github.com/Nickyie/Cybersecurity-Resources/</a>
+          <p>A comprehensive repository of links to labs, courses, CTFs, documentaries, and more.</p>
+        </li>
+        <li>
+          <h3>Free Labs for RED TEAM &amp; BLUETEAM/CTF Skills</h3>
+          <a href="https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Free%20Labs%20to%20Practice%20your%20REDTEAM/BLUETEAM%20and%20CTF%20Skills%20.md" target="_blank">https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Free%20Labs%20to%20Practice%20your%20REDTEAM/BLUETEAM%20and%20CTF%20Skills%20.md</a>
+          <p>A curated list of free practice labs and challenges for both red team and blue team skills.</p>
+        </li>
+        <li>
+          <h3>Cybersecurity &amp; Hacking Documentaries</h3>
+          <a href="https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Cybersecurity%20%26%20Hacking%20Documentaries/Cybersec%20%26%20Hacking%20Documentaries.md" target="_blank">https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Cybersecurity%20%26%20Hacking%20Documentaries/Cybersec%20%26%20Hacking%20Documentaries.md</a>
+          <p>Links to free documentaries covering major cybercrime and hacking stories.</p>
+        </li>
+        <li>
+          <h3>Cybersecurity YouTube Channels</h3>
+          <a href="https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Cybersecurity%20YouTube%20Channels/Cybersecurity%20YouTube%20Channels.md" target="_blank">https://github.com/Nickyie/Cybersecurity-Resources/blob/main/Cybersecurity%20YouTube%20Channels/Cybersecurity%20YouTube%20Channels.md</a>
+          <p>A list of recommended YouTube channels offering technical tutorials and cybersecurity insights.</p>
+        </li>
+        <li>
+          <h3>Raindrop.io Collections<br>OSINT MTHRFCKR</h3>
+          <a href="https://raindrop.io/whoisdsmith/osint-mthrfckr-38634492" target="_blank">https://raindrop.io/whoisdsmith/osint-mthrfckr-38634492</a>
+          <p>A collection of advanced OSINT tools and resources.</p>
+        </li>
+        <li>
+          <h3>Tools MTHRFCKR</h3>
+          <a href="https://raindrop.io/whoisdsmith/tools-mthrfckr-38657486" target="_blank">https://raindrop.io/whoisdsmith/tools-mthrfckr-38657486</a>
+          <p>Curated list of cybersecurity tools and scripts.</p>
+        </li>
+        <li>
+          <h3>Cybersecurity Volunteer Opportunities</h3>
+          <a href="https://raindrop.io/marianne-louise-n/cybersecurity-volunteer-opportunities-list-cvol-39531459" target="_blank">https://raindrop.io/marianne-louise-n/cybersecurity-volunteer-opportunities-list-cvol-39531459</a>
+          <p>Opportunities to volunteer and gain practical experience in cybersecurity.</p>
+        </li>
+        <li>
+          <h3>Security Resources (ActionSkills Collection)</h3>
+          <a href="https://raindrop.io/ActionSkills/security-resources-15283200" target="_blank">https://raindrop.io/ActionSkills/security-resources-15283200</a>
+          <p>A broad collection covering various aspects of cybersecurity research and training.</p>
+        </li>
+        <li>
+          <h3>Cyber Subreddits</h3>
+          <a href="https://raindrop.io/cyberpickio/cyber-sub-reddits-29987888" target="_blank">https://raindrop.io/cyberpickio/cyber-sub-reddits-29987888</a>
+          <p>A list of active subreddits and online communities discussing cybersecurity.</p>
+        </li>
+        <li>
+          <h3>Latest Cyber Sec News</h3>
+          <a href="https://raindrop.io/cyberpickio/latest-cyber-sec-news-by-thecyberpicker-29876592" target="_blank">https://raindrop.io/cyberpickio/latest-cyber-sec-news-by-thecyberpicker-29876592</a>
+          <p>An aggregated list of current cybersecurity news items.</p>
+        </li>
+        <li>
+          <h3>OSINT Tools by Cyberpick.io</h3>
+          <a href="https://raindrop.io/cyberpickio/osint-tools-by-cyberpick-io-27074360" target="_blank">https://raindrop.io/cyberpickio/osint-tools-by-cyberpick-io-27074360</a>
+          <p>A compilation of open‑source intelligence tools.</p>
+        </li>
+        <li>
+          <h3>Digital Forensics Resources</h3>
+          <a href="https://raindrop.io/nplibrary/digital-forensics-16162460" target="_blank">https://raindrop.io/nplibrary/digital-forensics-16162460</a>
+          <p>Curated resources on digital forensics and DFIR.</p>
+        </li>
+        <li>
+          <h3>Exploits Collection</h3>
+          <a href="https://raindrop.io/whoisdsmith/exploits-38634527" target="_blank">https://raindrop.io/whoisdsmith/exploits-38634527</a>
+          <p>A dedicated collection for exploit research and tools.</p>
+        </li>
+        <li>
+          <h3>General Security Collection</h3>
+          <a href="https://raindrop.io/rudra-singh/security-21342146" target="_blank">https://raindrop.io/rudra-singh/security-21342146</a>
+          <p>Various cybersecurity resources across multiple topics.</p>
+        </li>
+        <li>
+          <h3>Hacking Resources</h3>
+          <a href="https://raindrop.io/laurent-devernay/hacking-7258298" target="_blank">https://raindrop.io/laurent-devernay/hacking-7258298</a>
+          <p>Tutorials, guides, and research materials on hacking techniques.</p>
+        </li>
+        <li>
+          <h3>Labs Collection</h3>
+          <a href="https://raindrop.io/hartmanj/labs-47568365" target="_blank">https://raindrop.io/hartmanj/labs-47568365</a>
+          <p>A curated list of lab environments, CTFs, and practical exercises.</p>
+        </li>
+        <li>
+          <h3>Digital Forensics &amp; DFIR</h3>
+          <a href="https://raindrop.io/whoisdsmith/digital-forensics-dfir-38634524" target="_blank">https://raindrop.io/whoisdsmith/digital-forensics-dfir-38634524</a>
+          <p>Resources specifically for digital forensics and incident response.</p>
+        </li>
+        <li>
+          <h3>Penetration Testing Resources</h3>
+          <a href="https://raindrop.io/bizhanrensheng/pt-50085921/sort=-created&perpage=30&page=13" target="_blank">https://raindrop.io/bizhanrensheng/pt-50085921/sort=-created&perpage=30&page=13</a>
+          <p>Guides and resources dedicated to penetration testing.</p>
+        </li>
+        <li>
+          <h3>AI Tools Collection</h3>
+          <a href="https://raindrop.io/whytryai/ai-tools-40942232" target="_blank">https://raindrop.io/whytryai/ai-tools-40942232</a>
+          <p>A collection of AI-powered tools, including those for cybersecurity analysis.</p>
+        </li>
+        <li>
+          <h3>DeGooGlisons Internet (De-googlisation)</h3>
+          <a href="https://degooglisons-internet.org/en/" target="_blank">https://degooglisons-internet.org/en/</a>
+          <p>Focuses on privacy, de‑googlisation, and reducing online tracking.</p>
+        </li>
+        <li>
+          <h3>Additional “A” Collections &amp; Black Hat Resources</h3>
+          <p>
+            <a href="https://raindrop.io/bizhanrensheng/a-50084561" target="_blank">https://raindrop.io/bizhanrensheng/a-50084561</a><br>
+            <a href="https://raindrop.io/bizhanrensheng/a-50084382/sort=-created&perpage=30&page=39" target="_blank">https://raindrop.io/bizhanrensheng/a-50084382/sort=-created&perpage=30&page=39</a><br>
+            <a href="https://raindrop.io/bizhanrensheng/black-50086130" target="_blank">https://raindrop.io/bizhanrensheng/black-50086130</a><br>
+            <a href="https://raindrop.io/bizhanrensheng/a-35941887/sort=-sort&perpage=30&page=84" target="_blank">https://raindrop.io/bizhanrensheng/a-35941887/sort=-sort&perpage=30&page=84</a>
+          </p>
+          <p>These collections compile miscellaneous underground and “black hat” cybersecurity resources.</p>
+        </li>
+        <li>
+          <h3>AI Chatbot &amp; LLM Tools</h3>
+          <p>
+            <a href="https://raindrop.io/Interneto/ai-chatbot-local-47032005" target="_blank">https://raindrop.io/Interneto/ai-chatbot-local-47032005</a><br>
+            <a href="https://raindrop.io/esports/llm-32833330" target="_blank">https://raindrop.io/esports/llm-32833330</a><br>
+            <a href="https://raindrop.io/aixdesign/tools-18244945" target="_blank">https://raindrop.io/aixdesign/tools-18244945</a>
+          </p>
+          <p>Collections focused on AI tools relevant to cybersecurity and advanced analysis.</p>
+        </li>
+        <li>
+          <h3>Malware Analysis Collection</h3>
+          <a href="https://raindrop.io/hartmanj/malware-analysis-37261015" target="_blank">https://raindrop.io/hartmanj/malware-analysis-37261015</a>
+          <p>Resources and write‑ups on malware analysis and reverse engineering.</p>
+        </li>
+        <li>
+          <h3>Start.me OSINT &amp; Nixintel Collections</h3>
+          <p><strong>The Ultimate OSINT Collection</strong></p>
+          <p><strong>Nixintel’s OSINT Resource List</strong><br>
+          Aggregated, regularly updated collections of OSINT tools, techniques, and resources.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Category 4 -->
+    <div id="cat4" class="tabcontent">
+      <h2>4. Cyber Educational Platforms &amp; Certification Providers</h2>
+      <p>For formal training, recognized certifications, and professional development in cybersecurity:</p>
+      <ul class="resource-list">
+        <li>
+          <h3>Cybrary</h3>
+          <a href="https://www.cybrary.it/" target="_blank">https://www.cybrary.it/</a>
+          <p>Extensive free and paid courses on a wide range of cybersecurity topics.</p>
+        </li>
+        <li>
+          <h3>EC-Council</h3>
+          <a href="https://www.eccouncil.org/" target="_blank">https://www.eccouncil.org/</a>
+          <p>Home of the Certified Ethical Hacker (CEH) and other cyber credentials.</p>
+        </li>
+        <li>
+          <h3>CompTIA</h3>
+          <a href="https://www.comptia.org/" target="_blank">https://www.comptia.org/</a>
+          <p>Industry‑recognized certifications such as Security+, CySA+, and PenTest+ with ample study resources.</p>
+        </li>
+        <li>
+          <h3>GIAC</h3>
+          <a href="https://www.giac.org/" target="_blank">https://www.giac.org/</a>
+          <p>Certifications in incident response, penetration testing, digital forensics, and more.</p>
+        </li>
+        <li>
+          <h3>Offensive Security</h3>
+          <a href="https://www.offensive-security.com/" target="_blank">https://www.offensive-security.com/</a>
+          <p>Creators of the OSCP certification with extensive hands‑on penetration testing courses.</p>
+        </li>
+        <li>
+          <h3>SANS Institute</h3>
+          <a href="https://www.sans.org/cyber-security-courses/" target="_blank">https://www.sans.org/cyber-security-courses/</a>
+          <p>Highly regarded training with real‑world labs and certification programs.</p>
+        </li>
+        <li>
+          <h3>(ISC)²</h3>
+          <a href="https://www.isc2.org/" target="_blank">https://www.isc2.Org/</a>
+          <p>Provider of certifications like CISSP, SSCP, and more, with free exam prep resources.</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
